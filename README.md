@@ -10,6 +10,6 @@ This is for learning purposes kubernetes
   
   -$ wget -qO- http://$POD_IP
   
-  -$ kubectl port-froward apche :80 & { It will forward to the localhost }
+  -$ kubectl port-forward apche :80 & { It will forward to the localhost }
   
   -$ wget -qO- http://localhost:<$Mapping_port>
