@@ -22,4 +22,19 @@ This is for learning purposes kubernetes
   
   -$ kubectl describe pods -l app-nginx
   
+# file:nginx-deployment-dev.yaml
+
+  -$ kubectl create -f nginx-deployment-dev.yaml
+  
+  -$ kubectl get pods
+  
+  -$ kubectl describe deployments
+  
+  -$ kubectl describe deployments -l app=nginx-deployment-dev
+  
+  -{ If we want to change the version in dev environment where we need to update the version of nginx } 
+    
+  -$ kubectl apply -f nginx-deployment-update-dev.yaml
+  
+  
   
