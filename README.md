@@ -47,6 +47,20 @@ This is for learning purposes kubernetes
   -$ kubectl describe replication controller
   
     If we try to delete any pod the replication controller will try to bring it back
-  
+
+# file:nginx-service.yaml
+
+ -$ kubectl create -f nginx-service.yaml
+ 
+ -$ kubectl get service 
+ 
+ -$ kubectl describe service nginx-service
+ 
+ -$ kubectl run busybox --image=busybox --restart=Never --tty -i --generator=run-pod/v1
+ 
+ -$ wget -qO- http://$CLUSTER_IP:8000
+ 
+ -$ kubectl delete service nginx-service
+ 
   
   
