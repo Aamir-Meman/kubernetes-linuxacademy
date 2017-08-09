@@ -36,5 +36,17 @@ This is for learning purposes kubernetes
     
   -$ kubectl apply -f nginx-deployment-update-dev.yaml
   
+# file:nginx-multi-label.yaml
+  
+  -$ kubectl create -f nginx-multi-label.yaml
+  
+  -$ kubectl get pods
+  
+  -$ kubectl describe pods
+  
+  -$ kubectl describe replication controller
+  
+    If we try to delete any pod the replication controller will try to bring it back
+  
   
   
