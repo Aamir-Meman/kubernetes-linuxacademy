@@ -80,7 +80,7 @@ This is for learning purposes kubernetes
  
  -$ kubectl get pods
  
-  For replicas to run in the command line 
+ ## For replicas to run in the command line 
   
   -$ kubectl run myreplicas --image=latest123/apache --replicas=2 --labels=app=myapache,version=1.0
   
@@ -90,20 +90,28 @@ This is for learning purposes kubernetes
   
   -$ kubectl describe pods -l version=1.0
   
-  #Interacting with Pod Containers
+  # Interacting with pod containers
   
   -$ kubectl exec apache date
   
   -$ kubectl exec apache -i -t -- /bin/bash
   
   -root@apache:/# ps aux | grep apache
+  
     -export TERM=xterm
+    
     -apt-get update
+    
     -apt-get install lynx
+    
     -lynx http://localhost
+    
     -mv index.html index.backup
+    
     -echo "This is a test page" > index.html
+    
     -lynx http://localhost
+    
     - exit
     
   -$ kubectl get pods { The pod will be running }
@@ -111,4 +119,5 @@ This is for learning purposes kubernetes
   -$ kubectl exec myapache -i -t -- /bin/bash
   
   -$ lynx http://localhost
+  
      - xterm
