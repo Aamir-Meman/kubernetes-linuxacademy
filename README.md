@@ -121,3 +121,16 @@ This is for learning purposes kubernetes
   -$ lynx http://localhost
   
      - xterm
+     
+## Logs 
+
+-$ kubectl logs apache { Here apache is a pod running }
+
+-$ kubectl logs --tail=10 apache { This will give us a 10 previous command }
+
+-$ kubectl logs --since=24h apache
+
+-$ kubectl logs -f apache 
+
+
+
