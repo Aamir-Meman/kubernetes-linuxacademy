@@ -62,5 +62,33 @@ This is for learning purposes kubernetes
  
  -$ kubectl delete service nginx-service
  
+# Creating Temporary pods at the command line
+
+ -$ kubectl run mysample --image=latest123/apache 
+ 
+ -$ kubectl get pods
+ 
+ -$ kubectl get deployments
+ 
+ -$ kubectl describe deployments 
+ 
+ -$ kubectl describe pod <running pod>
+ 
+ -$ kubectl delete deployment mysample
+ 
+ -$ kubectl get deployments { It will not show anything }
+ 
+ -$ kubectl get pods
+ 
+  For replicas to run in the command line 
   
+  -$ kubectl run myreplicas --image=latest123/apache --replicas=2 --labels=app=myapache,version=1.0
   
+  -$ kubectl describe deployment myreplicas
+  
+  -$ kubectl get pods
+  
+  -$ kubectl describe pods -l version=1.0
+  
+ 
+
