@@ -132,5 +132,22 @@ This is for learning purposes kubernetes
 
 -$ kubectl logs -f apache 
 
+## Autoscaling and scaling our pods
+
+-$ kubectl run myautoscale --images=latest123/apache --port=80 --labels=app=myautoscale
+
+-$ kubectl get deployments
+
+-$ kubectl autoscale deployment myautoscale --min=2 --max=6
+
+-$ kubectl scale --current-replicas=2 --replicas=4 deployment/myautoscale
+
+-$ kubectl get deployments { You will see 4 pods running }
+
+-$ kubectl get pods
+
+-$ kubectl scale --current-replicas=4 --replicas=2 deployment/autoscale { downgrade from 4 to 2 }
+
+
 
 
